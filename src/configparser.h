@@ -17,7 +17,7 @@ public:
 	char* getModulePath();
 	list<string> getModuleName();
 	list<string> getFileType();
-private://for single
+private:// for single
 	ConfigParser();
 	static ConfigParser* _self;
 private:
@@ -25,7 +25,7 @@ private:
 	char* seed;
 	int deeps;
 	int log_level;
-	char* module_path;
+	char*  module_path;
 	list<string> module_name;
 	list<string> file_type;
 };

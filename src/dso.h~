@@ -44,12 +44,6 @@ class ModuleManager
   map<string,MODULE*> m_modules;//模块管理结构
 };
 
-struct htmlParserParam
-{
-  string url;//in
-  list<string> urls;//out
-};
-
 
 
 #endif
