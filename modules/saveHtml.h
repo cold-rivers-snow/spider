@@ -1,9 +1,9 @@
-#include "save"
+#include "savebase.h"
 
-using namespace std;
 
-class SaveHtml	: public SaveBase
+class SaveHtml : public saveBase
 {
-public:
-	
+
+
+
 };

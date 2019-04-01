@@ -1,8 +1,11 @@
-#include "save"
+#include "saveBase.h"
 
-using namespace std;
 
 class SaveImage : public SaveBase
 {
 
+
 };
+
+
+

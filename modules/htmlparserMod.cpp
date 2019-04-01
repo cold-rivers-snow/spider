@@ -1,22 +1,29 @@
 #include "../src/dso.h"
-#include "htmlParserMode.h"
+#include "htmlParserMod.h"
 
-void init(MODULE* module)
+static void init(MODULE * module)
 {
-	
+	//nothing for init
 }
 
-int handle(void*)
+static int handle(void *param)
 {
-	struct htmlParserParam* lparam = (struct htmlParserParam)param;
+	struct htmlParserParam* lparam = (struct htmlParserMod*)param;
 	HtmlParser loParser;
-	loParser.getUrls(param->url);
 	param->urls = loParser.getUrls(param->url);
 	if(param->urls.count() == 0)
 	{
 		return MODULE_ERR;
 	}
-
 	return MODULE_OK;
+
 }
+
+MODULE htmlparser
+{
+    STANDARD_MODULE_STUFF,
+    init,
+    handler
+}
+
 
